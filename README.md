@@ -1,2 +1,2 @@
 # Bullish-AI
-stock scrapper application that is integrated with ai
+Algorithmic trading application, refinied through the use of Machine Learning and Back Testing

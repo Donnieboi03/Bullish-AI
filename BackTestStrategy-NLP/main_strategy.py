@@ -82,20 +82,6 @@ class TradingBot():
 
         return last_price, rsi, macd
     
-    def get_trail_percent(self, symbol, bias = 0.05):
-        stock = self.get_price_data(symbol=symbol)
-        if stock == -1:
-            return -1
-        
-        def calculate_normalized_volatility(prices):
-            returns = prices.pct_change()  # daily returns
-            volatility = np.std(returns)  # standard deviation of daily returns
-            mean_price = np.mean(prices)  # average price
-            normalized_volatility = volatility / mean_price  # normalize the volatility by mean price
-            return normalized_volatility
-        
-        return calculate_normalized_volatility(stock) + bias
-    
     def get_sentiment(self, symbol, hours_prior= 24):
         news_start = (datetime.now(pacific_tz) - timedelta(hours=hours_prior)).strftime("%Y-%m-%dT%H:%M:%SZ")
         news_end = datetime.now(pacific_tz).strftime("%Y-%m-%dT%H:%M:%SZ")
@@ -126,7 +112,7 @@ class TradingBot():
                     qty= qty,
                     side= side,
                     type= 'trailing_stop',
-                    trail_percent= self.get_trail_percent(symbol)
+                    trail_percent= 5
                 )
                 print("Ordered: ", symbol, qty, side, datetime.now(pacific_tz))
         except Exception as e:

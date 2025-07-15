@@ -1,6 +1,7 @@
-# 📈 Bullish-AI – AI-Powered Sentiment-Driven Trading Agent
+# 📈 Bullish-AI 
+## AI-Powered Sentiment-Driven Trading Agent
 
-Jarvis is an automated trading bot built in Python that uses **technical indicators**, **news sentiment**, and **Alpaca's API** to make intelligent trading decisions. It combines real-time price analysis with NLP-powered sentiment evaluation to simulate autonomous, risk-managed stock trading.
+Bullish-AI is an automated trading bot built in Python that uses **technical indicators**, **news sentiment**, and **Alpaca's API** to make intelligent trading decisions. It combines real-time price analysis with NLP-powered sentiment evaluation to simulate autonomous, risk-managed stock trading.
 
 ---
 

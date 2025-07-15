@@ -12,7 +12,6 @@ Jarvis is an automated trading bot built in Python that uses **technical indicat
 - 🔁 **Automated Trading Loop** — Trades every N hours (configurable) during market hours.
 - 📉 **Trailing Stop Orders** — Uses trailing stop loss for exit automation.
 - ☁️ **Alpaca Paper Trading** — Fully integrated with Alpaca’s paper trading API.
-- 🧵 **Thread-Ready** — Built for future scalability with threading planned.
 
 ---
 

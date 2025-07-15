@@ -1,17 +1,36 @@
-# Bullish-AI
-⚙️ High-Performance C++ Matching Engine
-A multithreaded, low-latency matching engine for simulating a financial order book. Built entirely in modern C++ with custom heap-based order books for managing price levels and thread-safe execution.
+# 📈 Jarvis – AI-Powered Sentiment-Driven Trading Bot
 
-🧠 Features:
+Jarvis is an automated trading bot built in Python that uses **technical indicators**, **news sentiment**, and **Alpaca's API** to make intelligent trading decisions. It combines real-time price analysis with NLP-powered sentiment evaluation to simulate autonomous, risk-managed stock trading.
 
-- 🏛 *Custom-built OrderBook with min/max heap logic*
+---
 
-- 🧵 *Thread-safe matching engine using std::thread, mutex, and condition_variable*
+## 🧠 Features
 
-- 💹 *Support for limit orders (BID/ASK) with real-time matching*
+- 📰 **News Sentiment Analysis** — Leverages `FinBERT` (via `estimate_sentiment`) to analyze stock news.
+- 📊 **Technical Indicators** — Calculates **RSI** and **MACD Histogram** for price momentum and reversal signals.
+- 💼 **Risk-Based Position Sizing** — Dynamically adjusts trade size based on sentiment strength, RSI, and MACD.
+- 🔁 **Automated Trading Loop** — Trades every N hours (configurable) during market hours.
+- 📉 **Trailing Stop Orders** — Uses trailing stop loss for exit automation.
+- ☁️ **Alpaca Paper Trading** — Fully integrated with Alpaca’s paper trading API.
+- 🧵 **Thread-Ready** — Built for future scalability with threading planned.
 
-- 🗑 *Order placement, editing, and cancellation*
+---
 
-- 📊 *Efficient price level management with std::map<double, OrderLevel>*
+## 🛠️ Tech Stack
 
-- 🛠 *Simulated exchange behavior suitable for HFT backtesting, learning, or integration into trading bots*
+| Tool | Purpose |
+|------|---------|
+| `Alpaca API` | Brokerage and real-time data |
+| `FinBERT` | Financial news sentiment analysis |
+| `NumPy` | Technical indicator calculations |
+| `pytz` | Timezone management (Pacific Time) |
+| `datetime` | Trade interval and market hours control |
+
+---
+
+## 🚀 Getting Started
+
+### 1. Clone the repository
+```bash
+git clone https://github.com/yourusername/jarvis-trading-bot.git
+cd jarvis-trading-bot
